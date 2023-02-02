@@ -105,6 +105,7 @@ h6 {
 html,
 body {
   font-family: "Lato", sans-serif;
+  min-width: 100%;
   height: 100%;
 }
 
@@ -122,41 +123,50 @@ body {
   color: #ffffff;
   background: url("../img/Header/banner.png") 50% 0/100% 80% no-repeat;
 }
+.header__container {
+  max-width: 1512px;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__body {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
 .header_logo {
   width: auto;
   max-height: 56px;
 }
-.header__container {
-  max-width: 1512px;
-  min-height: 821px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-.header__body {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 25px 0;
-}
 .header__list {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 0 -17.5px;
 }
 .header__item {
-  margin: 0 17.5px;
+  margin-right: 35px;
+}
+.header__item:last-child {
+  margin-right: 0;
 }
 .header__content {
   text-align: center;
-  margin-top: 135px;
+  margin: 160px auto;
 }
 .header__content * {
-  margin-bottom: 41px;
+  margin-bottom: 40px;
+}
+.header__content .button {
+  margin-bottom: 0;
 }
 .header__label {
+  margin: 0 20px 40px;
   font-family: "Bernadette";
   font-size: 111px;
   font-weight: 400;
@@ -174,15 +184,6 @@ body {
   font-size: 16px;
   font-weight: 300;
   line-height: 24px;
-}
-.header__footer {
-  max-width: 1171px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 88px;
 }
 
 .link {
@@ -206,6 +207,7 @@ body {
   box-shadow: 0 0 49px rgba(0, 0, 0, 0.07);
   background-color: #ffffff;
   background-image: linear-gradient(to right, #de813c 0%, #3f519a 100%);
+  white-space: nowrap;
   padding: 14px 24px;
   border-radius: 60px;
 }
@@ -214,40 +216,200 @@ body {
   background-image: none;
 }
 
-.card__item {
-  position: relative;
-  max-width: 372px;
-  box-shadow: 0 0 49px rgba(0, 0, 0, 0.07);
-  border-radius: 10px;
-  background-color: #ffffff;
-  color: #333332;
+.header__footer {
+  max-width: 1171px;
+}
+
+.card__row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
   text-align: center;
 }
-.card__item * {
-  margin-bottom: 25px;
+.card__item {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  flex: 0 1 30%;
+  justify-content: center;
+  box-shadow: 0 0 49px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  margin-bottom: 40px;
 }
 .card__img {
-  width: 100%;
-  height: 50%;
+  background-size: contain;
+}
+.card__body {
+  height: 100%;
+  padding: 25px 30px;
+  padding-bottom: 35px;
+  text-align: center;
+  color: #333332;
+  position: relative;
+  background-color: #ffffff;
 }
 .card__title {
+  margin-bottom: 25px;
   font-size: 25px;
   font-weight: 700;
 }
 .card__text {
-  color: #040404;
-  max-width: 61%;
   font-size: 16px;
   font-weight: 300;
   line-height: 24px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 40px;
 }
-.card .button {
-  margin-bottom: 0;
+
+.button_flying {
   position: absolute;
-  bottom: -21px;
+  bottom: -20px;
   left: 50%;
   transform: translate(-50%, 0);
+}
+
+.About {
+  color: #040404;
+}
+.About__container {
+  max-width: 1171px;
+  margin: 0 auto;
+  padding: 120px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+}
+.About__img {
+  height: 85%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 33%;
+}
+.Left-column__title {
+  color: #333332;
+  font-family: "Bernadette";
+  font-size: 50px;
+  font-weight: 400;
+  letter-spacing: -1.58px;
+  margin-bottom: 30px;
+}
+.Left-column__text {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 45px;
+}
+.Left-column_bold {
+  font-weight: 400;
+  letter-spacing: 0.45px;
+}
+.Left-column_button {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.Right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+}
+.Right-column__text {
+  font-size: 18px;
+  font-style: italic;
+  line-height: 30px;
+  letter-spacing: 0.45px;
+  margin-bottom: 45px;
+}
+.Right-column__title {
+  color: #333332;
+  font-family: "Bernadette";
+  font-size: 47px;
+  font-weight: 400;
+  letter-spacing: -1.58px;
+}
+
+.Features__container {
+  max-width: 1171px;
+  margin: 0 auto;
+  padding: 20px 0 75px 0;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.Features_img {
+  flex: 1 1 auto;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.Features__card {
+  max-width: 80%;
+  padding: 15px 30px;
+  box-shadow: 0 0 49px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Features__title {
+  color: #333332;
+  font-family: "Bernadette";
+  font-size: 50px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: -1.58px;
+}
+.Features__text {
+  color: #040404;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 30px;
+  text-align: center;
+  margin: 35px 0;
+}
+
+.Our-Services {
+  background: url("../img/Our-Services/library.jpg") 100% 0/45% 100% no-repeat, #f4f4f4;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+.Our-Services__container {
+  max-width: 1172px;
+  margin: 0 auto;
+}
+.Our-Services__body {
+  color: #040404;
+}
+.Our-Services__title {
+  color: #333332;
+  font-family: "Bernadette";
+  font-size: 50px;
+  font-weight: 400;
+  letter-spacing: -1.58px;
+}
+.Our-Services__text {
+  margin: 40px auto 40px 0;
+  max-width: 490px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0.45px;
+}
+.Our-Services__bold {
+  font-weight: 400;
 }/*# sourceMappingURL=style.css.map */
