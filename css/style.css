@@ -398,7 +398,6 @@ body {
 }
 .Our-Services__body {
   color: #040404;
-  width: 100%;
 }
 .Our-Services__title {
   color: #333332;
@@ -464,4 +463,204 @@ body {
   font-weight: 400;
   text-align: center;
   letter-spacing: 0.42px;
+}
+
+.Team__container {
+  max-width: 1300px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.Team__container::after {
+  content: "";
+  bottom: 0;
+  width: 100%;
+  min-height: 40%;
+  background-color: #f4f4f4;
+  position: absolute;
+}
+.Team__title {
+  color: #333332;
+  font-family: "Bernadette";
+  font-size: 50px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: -1.58px;
+  margin-bottom: 40px;
+}
+.Team__text {
+  max-width: 1105px;
+  color: #313131;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.45px;
+  margin-bottom: 40px;
+}
+.Team__row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  z-index: 2;
+  margin-bottom: 50px;
+}
+.Team__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 218px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.Team__item:last-child {
+  margin-right: 0;
+}
+.Team__img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.Team__Name {
+  color: #333332;
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.61px;
+  margin-bottom: 5px;
+}
+.Team__Post {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #a3a3a3;
+}
+
+.Member-Page__container {
+  margin: 0 auto;
+  max-width: 1202px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.Member-Page__body {
+  max-width: 483px;
+  padding-right: 55px;
+}
+.Member-Page__title {
+  color: #333332;
+  font-family: "Bernadette";
+  font-size: 65px;
+  font-weight: 400;
+  letter-spacing: -1.58px;
+}
+.Member-Page__Post {
+  color: #505050;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 33.29px;
+  letter-spacing: 0.5px;
+}
+.Member-Page__text {
+  color: #040404;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0.45px;
+  margin: 30px auto 70px 0;
+}
+.Member-Page__Person {
+  display: flex;
+}
+
+.progress {
+  width: 100%;
+  position: relative;
+  margin-bottom: 50px;
+}
+.progress:last-child {
+  margin-bottom: 0px;
+}
+.progress:before {
+  content: "";
+  width: 100%;
+  height: 14px;
+  border-radius: 7px;
+  background-color: #e0e0e0;
+  position: absolute;
+  right: 0;
+  bottom: -14px;
+}
+.progress:after {
+  content: "80%";
+  color: #333332;
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 0.61px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.progress__category {
+  color: #333332;
+  display: inline-block;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 0.61px;
+  margin-bottom: 10px;
+}
+.progress__bar {
+  width: 80%;
+  height: 14px;
+  box-shadow: 0 0 49px rgba(0, 0, 0, 0.07);
+  border-radius: 7px;
+  background-color: #fba419;
+  background-image: linear-gradient(to right, #de813c 0%, #3f519a 100%);
+}
+
+.Personal-card {
+  display: flex;
+  box-shadow: 0 0 49px rgba(0, 0, 0, 0.07);
+  background-color: #b19c93;
+  background-image: linear-gradient(-225deg, #de813c 0%, #3f519a 100%);
+}
+.Personal-card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 25px;
+}
+.Personal-card__text {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+}
+.Personal-card__text span {
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: 0.53px;
+}
+.Personal-card__Media {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Personal-card__item {
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 0 49px rgba(0, 0, 0, 0.07);
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
 }/*# sourceMappingURL=style.css.map */
