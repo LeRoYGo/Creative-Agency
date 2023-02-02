@@ -160,6 +160,7 @@ body {
         box-shadow: 0 0 49px rgba(0, 0, 0, 0.07);
         border-radius: 10px;
         margin-bottom: 40px;
+        border-radius: 10px;
     }
     &__img {
         // width: 100%;
@@ -174,6 +175,7 @@ body {
         color: $title-colour;
         position: relative;
         background-color: #ffffff;
+        border-radius: 10px;
     }
     &__title {
         margin-bottom: 25px;
@@ -200,16 +202,15 @@ body {
 .About {
     color: $text-colour;
     &__container {
-        max-width: 1171px;
         margin: 0 auto;
-        padding: 120px 0;
+        padding: 120px 15px;
+        max-width: 1202px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         position: relative;
     }
     &__img {
-        height: 85%;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -268,9 +269,9 @@ body {
 // Features
 .Features {
     &__container {
-        max-width: 1171px;
         margin: 0 auto;
-        padding: 20px 0 75px 0;
+        max-width: 1202px;
+        padding: 20px 15px 75px 15px;
         display: flex;
         flex-wrap: wrap;
         position: relative;
@@ -317,13 +318,17 @@ body {
 .Our-Services {
     background: url("../img/Our-Services/library.jpg") 100% 0/ 45% 100% no-repeat, #f4f4f4;
     padding-top: 90px;
-    padding-bottom: 90px;
+    padding-bottom: 70px;
     &__container {
-        max-width: 1172px;
+        max-width: 1202px;
+        padding-left: 15px;
+        padding-right: 15px;
         margin: 0 auto;
+        position: relative;
     }
     &__body {
         color: $text-colour;
+        width: 100%;
     }
     &__title {
         color: $title-colour;
@@ -334,7 +339,7 @@ body {
     }
     &__text {
         margin: 40px auto 40px 0;
-        max-width: 490px;
+        max-width: 450px;
         font-size: 18px;
         font-weight: 300;
         line-height: 30px;
@@ -342,5 +347,52 @@ body {
     }
     &__bold {
         font-weight: 400;
+    }
+    &__card {
+        position: absolute;
+        top: 0;
+        right: 25%;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 355px;
+        box-shadow: 0 0 49px rgba(0, 0, 0, 0.07);
+        border-radius: 10px;
+        background-color: #646464;
+        background-image: linear-gradient(-225deg, #de813c 0%, #3f519a 100%);
+        padding: 15px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 auto;
+        padding: 30px;
+        color: #ffffff;
+        border-bottom: 4px dotted rgba(255, 255, 255, 0.5);
+        border-right: 4px dotted rgba(255, 255, 255, 0.5);
+        &:nth-child(even) {
+            border-right: none;
+        }
+        &:nth-last-child(2) {
+            border-bottom: none;
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    &__icon {
+        background-size: auto auto;
+        max-width: 46px;
+        max-height: 45px;
+        margin-bottom: 10px;
+        fill: #ffffff;
+    }
+    &__title-card {
+        max-width: 82px;
+        font-size: 17px;
+        font-weight: 400;
+        text-align: center;
+        letter-spacing: 0.42px;
     }
 }
