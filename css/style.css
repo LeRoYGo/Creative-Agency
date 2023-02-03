@@ -394,7 +394,9 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .Our-Services__body {
   color: #040404;
@@ -418,8 +420,7 @@ body {
   font-weight: 400;
 }
 .Our-Services__card {
-  position: absolute;
-  top: 0;
+  position: relative;
   right: 25%;
   display: flex;
   flex-wrap: wrap;
@@ -481,7 +482,7 @@ body {
   content: "";
   bottom: 0;
   width: 100%;
-  min-height: 40%;
+  height: 40%;
   background-color: #f4f4f4;
   position: absolute;
 }
@@ -507,6 +508,7 @@ body {
 .Team__row {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   flex-wrap: wrap;
   z-index: 2;
   margin-bottom: 50px;
@@ -541,44 +543,6 @@ body {
   text-align: center;
   letter-spacing: 0.5px;
   color: #a3a3a3;
-}
-
-.Member-Page__container {
-  margin: 0 auto;
-  max-width: 1202px;
-  padding: 0 15px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 60px;
-}
-.Member-Page__body {
-  max-width: 483px;
-  padding-right: 55px;
-}
-.Member-Page__title {
-  color: #333332;
-  font-family: "Bernadette";
-  font-size: 65px;
-  font-weight: 400;
-  letter-spacing: -1.58px;
-}
-.Member-Page__Post {
-  color: #505050;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 33.29px;
-  letter-spacing: 0.5px;
-}
-.Member-Page__text {
-  color: #040404;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 30px;
-  letter-spacing: 0.45px;
-  margin: 30px auto 70px 0;
-}
-.Member-Page__Person {
-  display: flex;
 }
 
 .progress {
@@ -626,8 +590,49 @@ body {
   background-image: linear-gradient(to right, #de813c 0%, #3f519a 100%);
 }
 
+.Member-Page__container {
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  height: 100%;
+}
+.Member-Page__block-plug {
+  flex: 1 1 auto;
+}
+.Member-Page__body {
+  max-width: 483px;
+  padding-right: 55px;
+}
+.Member-Page__title {
+  color: #333332;
+  font-family: "Bernadette";
+  font-size: 65px;
+  font-weight: 400;
+  letter-spacing: -1.58px;
+}
+.Member-Page__Post {
+  color: #505050;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 33.29px;
+  letter-spacing: 0.5px;
+}
+.Member-Page__text {
+  color: #040404;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0.45px;
+  margin: 30px auto 70px 0;
+}
+.Member-Page__Person {
+  flex: 1 1 auto;
+  display: flex;
+}
 .Personal-card {
   display: flex;
+  flex: 1 1 auto;
   box-shadow: 0 0 49px rgba(0, 0, 0, 0.07);
   background-color: #b19c93;
   background-image: linear-gradient(-225deg, #de813c 0%, #3f519a 100%);
@@ -637,12 +642,14 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding: 50px 25px;
+  width: 100%;
 }
 .Personal-card__text {
   color: #ffffff;
   font-size: 18px;
   font-weight: 300;
   line-height: 30px;
+  max-width: 310px;
 }
 .Personal-card__text span {
   font-size: 21px;
@@ -651,8 +658,14 @@ body {
 }
 .Personal-card__Media {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+}
+.Personal-card__Media a {
+  margin-left: 10px;
+}
+.Personal-card__Media a:first-child {
+  margin-left: 0;
 }
 .Personal-card__item {
   width: 60px;
